@@ -1,0 +1,79 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class = "contodo cerrado">
+            <section class = "card chica">
+                <div class="img-cont abuelo" onclick="tarjeta()"></div>
+                <div class="content clickeado">
+                    <!-- Texto de la tarjeta -->
+                    <h2>
+                        Cordial invitación
+                    </h2>
+                    <p>
+                        "Has dejado un vacío tan grande
+    que ya nunca podrá llenarse, no se
+    te puede olvidar por tu nobleza."
+    Hijos, Hijos Políticos,
+    Nietos y Bisnietos
+    
+    de quien en vida fue:
+                    <span class="titulo">Ramón Victor Maurate Valero</span>
+                    <span class="paloma"></span>
+                    </p>
+                    <p>
+                        Invitan a Ud. y familia a la misa por su eterno
+        descanso que se realizará el <strong> día 17 de 
+            diciembre del 2022 a las 12:50 pm </strong> en la
+        Parroquia San Juan Bautista Acolla (Ref.
+        plaza principal del distrito de Acolla).
+        
+        Conm. el 1er mes de su
+        partida al Cielo.
+                    </p>
+    
+                </div>
+            </section>
+            <div class="cacho" onclick = "tarjeta()"></div>
+        </section>
+        <section class = "smt"></section>
+    </main>
+
+    <script>
+        let todo = document.querySelector('.contodo');
+        let cacho = document.querySelector('.cacho');
+        let imagen = document.querySelector('.img-cont');
+        let card = document.querySelector('.card');
+        let content = document.querySelector('.content');
+        let i = 1;
+        function tarjeta(){
+            if( i == 0){
+                // card.classList.add('chica');
+                imagen.classList.remove('familia');
+                imagen.classList.add('abuelo');
+                todo.classList.add('cerrado');
+                cacho.classList.remove('clickeado');
+                content.classList.add('clickeado');
+                i=1;
+            }else{
+                // card.classList.remove('chica');
+                imagen.classList.add('familia');
+                imagen.classList.remove('abuelo');
+                todo.classList.remove('cerrado');
+                cacho.classList.add('clickeado');
+                content.classList.remove('clickeado');
+                i=0;
+            }
+        }
+    </script>
+</body>
+</html>
